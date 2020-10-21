@@ -1,0 +1,10 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:   #cloud整合zookeeper后是这样配置的，如果单纯用dubbo+zookeeper配置是另外一种写法（dubbo.）
+    zookeeper:
+      #connect-string: 192.168.136.140:2181   #因为虚拟机上没装centos系统，也没装zookeeper
+      connect-string: 127.0.0.1:2181  #本地地址
